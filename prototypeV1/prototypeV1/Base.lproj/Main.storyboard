@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dgm-Zx-4TX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dgm-Zx-4TX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="4183.9694656488546" y="29.577464788732396"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="VUO-zK-msa">
             <objects>
-                <viewController id="qaG-QG-c1Q" customClass="ViewController" customModule="prototypeV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qaG-QG-c1Q" customClass="loginViewController" customModule="prototypeV1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bjh-zP-JyP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +139,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Submit"/>
                                 <connections>
+                                    <action selector="submitTapped:" destination="qaG-QG-c1Q" eventType="touchUpInside" id="03w-sc-CXb"/>
                                     <segue destination="Z57-yj-HeG" kind="show" id="n3H-td-YiM"/>
                                 </connections>
                             </button>
@@ -165,6 +166,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="X3P-05-d8B"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="xPz-US-EFJ" id="eC3-FM-WOl"/>
+                        <outlet property="passwordTextField" destination="aNO-NU-ULu" id="GFn-7W-up7"/>
+                        <outlet property="submitButton" destination="adg-Wd-6Gd" id="QGP-Ml-j8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEL-vc-xUG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -772,7 +778,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wCn-Bm-Vlt"/>
+        <segue reference="n3H-td-YiM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Screenshot 2024-11-29 at 11.28.03 AM" width="448" height="217"/>
