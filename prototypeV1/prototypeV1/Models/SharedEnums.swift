@@ -39,3 +39,16 @@ enum GameAccessType {
     case Public
     case inviteOnly
 }
+
+enum MessageType: String, Codable {
+    case text
+    case image
+    case gameInvite
+    case groupInvite
+}
+
+enum FriendshipStatus: String {
+    case pending
+    case accepted
+    case blocked
+}
