@@ -1,13 +1,13 @@
 //
-//  CreateViewController.swift
+//  NetworkViewController.swift
 //  prototypeV1
 //
-//  Created by Taksh Joshi on 29/11/24.
+//  Created by Chelsea Singla on 10/12/24.
 //
 
 import UIKit
 
-class CreateViewController: UIViewController {
+class NetworkViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

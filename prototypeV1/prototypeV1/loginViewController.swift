@@ -18,25 +18,25 @@ class loginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func submitTapped(_ sender: UIButton) {
-        guard let email = emailTextField.text, !email.isEmpty,
-                      let password = passwordTextField.text, !password.isEmpty else {
-                    showAlert(title: "Error", message: "Please fill in all fields.")
-                    return
-                }
-
-                loginUser(email: email, password: password) { success, errorMessage in
-                    DispatchQueue.main.async {
-                        if success {
-                            self.showAlert(title: "Success", message: "Login successful!")
-                            // Navigate to the main app screen or next view controller
-                            // Example: self.performSegue(withIdentifier: "goToMainApp", sender: nil)
-                        } else {
-                            self.showAlert(title: "Error", message: errorMessage ?? "Login failed.")
-                        }
-                    }
-                }
-    }
+//    @IBAction func submitTapped(_ sender: UIButton) {
+//        guard let email = emailTextField.text, !email.isEmpty,
+//                      let password = passwordTextField.text, !password.isEmpty else {
+//                    showAlert(title: "Error", message: "Please fill in all fields.")
+//                    return
+//                }
+//
+//                loginUser(email: email, password: password) { success, errorMessage in
+//                    DispatchQueue.main.async {
+//                        if success {
+//                            self.showAlert(title: "Success", message: "Login successful!")
+//                            // Navigate to the main app screen or next view controller
+//                            // Example: self.performSegue(withIdentifier: "goToMainApp", sender: nil)
+//                        } else {
+//                            self.showAlert(title: "Error", message: errorMessage ?? "Login failed.")
+//                        }
+//                    }
+//                }
+//    }
     func showAlert(title: String, message: String) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
